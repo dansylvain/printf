@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+         #
+#    By: dan <dan@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/19 07:30:24 by dsylvain          #+#    #+#              #
-#    Updated: 2023/11/01 13:23:40 by dsylvain         ###   ########.fr        #
+#    Updated: 2023/11/01 15:04:38 by dan              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC = gcc
 
 CFLAGS = -Ilibft
 
-SRC = ft_printf.c ft_printf_utils.c
+SRC = ft_printf.c ft_printf_utils.c print_funcs.c
 
 OBJ = $(SRC:.c=.o)
 
