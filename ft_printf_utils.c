@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dan <dan@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:46:31 by dsylvain          #+#    #+#             */
-/*   Updated: 2023/11/01 13:36:08 by dsylvain         ###   ########.fr       */
+/*   Updated: 2023/11/01 15:38:58 by dan              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,37 @@ int	ft_putnbr_fd(int n, int fd)
 	ft_putchar_fd((num % 10) + '0', fd);
 	i++;
 	return(i);
+}
+
+int	ft_putunbr_fd(unsigned int n, int fd)
+{
+	long unsigned int	num;
+	int	i;
+
+	i = 0;
+	num = n;
+	if (num >= 10)
+	{
+		ft_putnbr_fd(num / 10, fd);
+	}
+	ft_putchar_fd((num % 10) + '0', fd);
+	i++;
+	return(i);
+}
+
+int	ft_put_hex(unsigned long n, int fd, char case_type)
+{
+    char	*base;
+    int	count = 0;
+
+    if (case_type == 'x')
+        base = "0123456789abcdef";
+    else
+        base = "0123456789ABCDEF";
+
+    if (n >= 16)
+        count += ft_put_hex(n / 16, fd, case_type);
+    ft_putchar_fd(base[n % 16], fd);
+    count++;
+    return (count);
 }
