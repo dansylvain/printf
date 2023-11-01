@@ -6,7 +6,7 @@
 #    By: dan <dan@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/19 07:30:24 by dsylvain          #+#    #+#              #
-#    Updated: 2023/11/01 15:04:38 by dan              ###   ########.fr        #
+#    Updated: 2023/11/01 16:37:55 by dan              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC = gcc
 
 CFLAGS = -Ilibft
 
-SRC = ft_printf.c ft_printf_utils.c print_funcs.c
+SRC = ft_printf.c ft_printf_utils.c print_funcs.c print_funcs_2.c testermain.c
 
 OBJ = $(SRC:.c=.o)
 
