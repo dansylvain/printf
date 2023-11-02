@@ -6,7 +6,7 @@
 /*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:46:31 by dsylvain          #+#    #+#             */
-/*   Updated: 2023/11/02 09:03:09 by dsylvain         ###   ########.fr       */
+/*   Updated: 2023/11/02 09:18:54 by dsylvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_putstr_fd(char *s, int fd)
 int	ft_putnbr_fd(int n, int fd)
 {
 	long int	num;
-	int	i;
+	int			i;
 
 	i = 0;
 	num = n;
@@ -56,7 +56,7 @@ int	ft_putnbr_fd(int n, int fd)
 int	ft_putunbr_fd(unsigned int n, int fd)
 {
 	long unsigned int	num;
-	int			i;
+	int					i;
 
 	i = 0;
 	num = n;
