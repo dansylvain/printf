@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dan <dan@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:51:10 by dsylvain          #+#    #+#             */
-/*   Updated: 2023/11/01 16:34:05 by dan              ###   ########.fr       */
+/*   Updated: 2023/11/02 09:09:19 by dsylvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdarg.h>
 # include <stdio.h>
 # include <unistd.h>
+# include <limits.h>
 
 typedef int	(*t_func_ptr)(va_list);
 
@@ -34,5 +35,7 @@ int		print_u(va_list args);
 int		print_p(va_list args);
 int		print_x_lowercase(va_list args);
 int		print_x_uppercase(va_list args);
+int		print_percent(va_list args);
+int		print_null(int	zero_null_or_nil);
 
 #endif
