@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   .testermain.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dan <dan@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 12:22:09 by flverge           #+#    #+#             */
-/*   Updated: 2023/11/01 16:36:46 by dan              ###   ########.fr       */
+/*   Updated: 2023/11/02 07:59:12 by dsylvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 // #include "src/ft_putstr.c"
 // #include "src/parsing.c"
 // #include "src/utils_1.c"
+# include <limits.h>
 
 
 void	bn(void)
@@ -173,72 +174,7 @@ int	main(void)
 
 	
 
-		// * TEST CHAR BONUSES 1
-
-	displayTestSeparator("BONUS CHAR 1", 96);
-
-	headings(1);
-	v_printf = printf("[%2c]", 'A');
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%2c]", 'A');
-	bn();
-	return_values(v_printf, v_ftprintf);
-	
-	// * TEST CHAR BONUSES 2
-
-	displayTestSeparator("BONUS CHAR 2", 96);
-
-	headings(1);
-	v_printf = printf("[%-2c]", 'A');
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-2c]", 'A');
-	bn();
-	return_values(v_printf, v_ftprintf);
-
-	// * TEST CHAR BONUSES 3
-	
-	displayTestSeparator("BONUS CHAR 3", 96);
-
-	headings(1);
-	v_printf = printf("[%-c]", 'B');
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-c]", 'B');
-	bn();
-	return_values(v_printf, v_ftprintf);
-
-			// * TEST CHAR BONUSES 4
-
-	displayTestSeparator("BONUS CHAR 4", 96);
-
-	headings(1);
-	v_printf = printf("[%1c]", 'A');
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%1c]", 'A');
-	bn();
-	return_values(v_printf, v_ftprintf);
-	
-	
-	// * TEST CHAR BONUSES 5
-
-	displayTestSeparator("BONUS CHAR 5", 96);
-
-	headings(1);
-	v_printf = printf("[%-1c]", 'A');
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-1c]", 'A');
-	bn();
-	return_values(v_printf, v_ftprintf);
-
-	
-
-	// ! END BONUS CHAR
-
-
+		
 
 
 	// * TEST 5
@@ -305,217 +241,7 @@ int	main(void)
 
 
 
-	// ! BONUS STRINGS
-
-
 	
-
-		// * TEST CHAR BONUSES 1_2 (full string)
-
-	displayTestSeparator("BONUS STRING 1", 92);
-
-	headings(1);
-	v_printf = printf("[%12s]", "Salut");
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%12s]", "Salut");
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 2", 92);
-
-	
-	headings(1);
-	v_printf = printf("[%-12s]", "Salut");
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-12s]", "Salut");
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	
-
-	displayTestSeparator("BONUS STRING 3 ", 92);
-	
-	headings(1);
-	v_printf = printf("[%.5s]", "Salut");
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.5s]", "Salut");
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	
-
-	displayTestSeparator("BONUS STRING 4", 92);
-	
-	headings(1);
-	v_printf = printf("[%.6s]", "Salut");
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.6s]", "Salut");
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 5", 92);
-	
-	headings(1);
-	v_printf = printf("[%.4s]", "Salut");
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.4s]", "Salut");
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 6", 92);
-	
-	headings(1);
-	v_printf = printf("[%4.4s]", "Salut");
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%4.4s]", "Salut");
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 7", 92);
-	
-	headings(1);
-	v_printf = printf("[%5.4s]", "Salut");
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%5.4s]", "Salut");
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 8", 92);
-	
-	headings(1);
-	v_printf = printf("[%6.4s]", "Salut");
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%6.4s]", "Salut");
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 9", 92);
-	
-	headings(1);
-	v_printf = printf("[%-6.4s]", "Salut");
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-6.4s]", "Salut");
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	
-
-
-		// * TEST CHAR BONUSES 2_2 (empty string)
-
-
-		
-
-	displayTestSeparator("BONUS STRING 10", 92);
-
-	headings(1);
-	v_printf = printf("[%12s]", empty);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%12s]", empty);
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 11", 92);
-
-	
-	headings(1);
-	v_printf = printf("[%-12s]", empty);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-12s]", empty);
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 12", 92);
-	
-	headings(1);
-	v_printf = printf("[%.5s]", empty);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.5s]", empty);
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 13", 92);
-	
-	headings(1);
-	v_printf = printf("[%.6s]", empty);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.6s]", empty);
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 14", 92);
-	
-	headings(1);
-	v_printf = printf("[%.4s]", empty);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.4s]", empty);
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 15", 92);
-	
-	headings(1);
-	v_printf = printf("[%4.4s]", empty);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%4.4s]", empty);
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 16", 92);
-	
-	headings(1);
-	v_printf = printf("[%5.4s]", empty);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%5.4s]", empty);
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 17", 92);
-	
-	headings(1);
-	v_printf = printf("[%6.4s]", empty);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%6.4s]", empty);
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 18", 92);
-	
-	headings(1);
-	v_printf = printf("[%-6.4s]", empty);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-6.4s]", empty);
-	return_values(v_printf, v_ftprintf);
-	bn();
-
-	displayTestSeparator("BONUS STRING 19", 92);
-	
-	headings(1);
-	v_printf = printf("[%.0sh]", "Coucou");
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.0sh]", "Coucou");
-	return_values(v_printf, v_ftprintf);
-	bn();
-
 
 		// * TEST 9
 	
@@ -557,43 +283,6 @@ int	main(void)
 
 	return_values(v_printf, v_ftprintf);
 
-	// ! BONUS %P
-
-	
-
-	displayTestSeparator("BONUS %P 1", 91);
-
-	headings(1);
-	v_printf = printf("[%1p]", &pointer_test);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%1p]", &pointer_test);
-	bn();
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %P 2", 91);
-
-	headings(1);
-	v_printf = printf("[%12p]", &pointer_test);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%12p]", &pointer_test);
-	bn();
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %P 3", 91);
-
-	headings(1);
-	v_printf = printf("[%-20p]", &pointer_test);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-20p]", &pointer_test);
-	bn();
-	return_values(v_printf, v_ftprintf);
-
-
-	// ! FIN BONUS P
-
 	
 	
 
@@ -614,10 +303,10 @@ int	main(void)
 	displayTestSeparator("Test %u int_max", 95);
 
 	headings(1);
-	v_printf = printf("%u", FT_INT_MAX);
+	v_printf = printf("%u", INT_MAX);
 	bn();
 	headings(2);
-	v_ftprintf = ft_printf("%u", FT_INT_MAX);
+	v_ftprintf = ft_printf("%u", INT_MAX);
 	bn();
 
 	return_values(v_printf, v_ftprintf);
@@ -707,10 +396,10 @@ int	main(void)
 	displayTestSeparator("Test %i int max", 92);
 
 	headings(1);
-	v_printf = printf("%i", FT_INT_MAX);
+	v_printf = printf("%i", INT_MAX);
 	bn();
 	headings(2);
-	v_ftprintf = ft_printf("%i", FT_INT_MAX);
+	v_ftprintf = ft_printf("%i", INT_MAX);
 
 	return_values(v_printf, v_ftprintf);
 
@@ -720,10 +409,10 @@ int	main(void)
 	displayTestSeparator("Test %i int min", 92);
 
 	headings(1);
-	v_printf = printf("%i", FT_INT_MIN);
+	v_printf = printf("%i", INT_MIN);
 	bn();
 	headings(2);
-	v_ftprintf = ft_printf("%i", FT_INT_MIN);
+	v_ftprintf = ft_printf("%i", INT_MIN);
 
 	return_values(v_printf, v_ftprintf);
 
@@ -739,235 +428,6 @@ int	main(void)
 	
 	return_values(v_printf, v_ftprintf);
 
-
-	// ! BONUS PART i
-
-	displayTestSeparator("BONUS %i 1", 92);
-
-	headings(1);
-	v_printf = printf("[%1i]", 0);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%1i]", 0);
-
-	return_values(v_printf, v_ftprintf);
-
-	
-	
-	displayTestSeparator("BONUS %i 2", 92);
-
-	headings(1);
-	v_printf = printf("[%1i]", -4);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%1i]", -4);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 3", 92);
-
-	headings(1);
-	v_printf = printf("[%10i]", 42);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%10i]", 42);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 4", 92);
-
-	headings(1);
-	v_printf = printf("[%20i]", -42000);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%20i]", -42000);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 5", 92);
-
-	headings(1);
-	v_printf = printf("[%20i]", 42000);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%20i]", 42000);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 6", 92);
-
-	headings(1);
-	v_printf = printf("[%-20i]", 42000);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-20i]", 42000);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 7", 92);
-
-	headings(1);
-	v_printf = printf("[%-20i]", -42000);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-20i]", -42000);
-
-	return_values(v_printf, v_ftprintf);
-
-
-
-	
-
-	displayTestSeparator("BONUS %i 8", 92);
-
-	headings(1);
-	v_printf = printf("[%.3i]", -1);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.3i]", -1);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 9", 92);
-
-	headings(1);
-	v_printf = printf("[%.5i]", 1234);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.5i]", 1234);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 10", 92);
-
-	headings(1);
-	v_printf = printf("[%.13i]", FT_INT_MIN);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.13i]", FT_INT_MIN);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 11", 92);
-
-	headings(1);
-	v_printf = printf("[%.1i]", FT_INT_MIN + 1);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.1i]", FT_INT_MIN + 1);
-	return_values(v_printf, v_ftprintf);
-
-
-	displayTestSeparator("BONUS %i 12", 92);
-
-	headings(1);
-	v_printf = printf("[%.1i]", FT_INT_MIN);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.1i]", FT_INT_MIN);
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 13", 92);
-	
-		headings(1);
-	v_printf = printf("[%.1i]", FT_INT_MAX);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.1i]", FT_INT_MAX);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 14", 92);
-
-	headings(1);
-	v_printf = printf("[%.0i]", 42);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.0i]", 42);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 15", 92);
-
-	headings(1);
-	v_printf = printf("[%.0i]", 0);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.0i]", 0);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 16", 92);
-
-	headings(1);
-	v_printf = printf("[%.1i]", 0);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.1i]", 0);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 17", 92);
-
-	headings(1);
-	v_printf = printf("[%.2i]", 0);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%.2i]", 0);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 18", 92);
-
-	headings(1);
-	v_printf = printf("[%-1.8i]", 0);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-1.8i]", 0);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 19", 92);
-
-	headings(1);
-	v_printf = printf("[%-1.0i]", -10);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-1.0i]", -10);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 20", 92);
-
-	headings(1);
-	v_printf = printf("[%-10.0i]", 0);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-10.0i]", 0);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 21", 92);
-
-	headings(1);
-	v_printf = printf("[%-20.19i]", 8000);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%-20.19i]", 8000);
-
-	return_values(v_printf, v_ftprintf);
-
-	displayTestSeparator("BONUS %i 22", 92);
-
-	headings(1);
-	v_printf = printf("[%20.19i]", 8000);
-	bn();
-	headings(2);
-	v_ftprintf = ft_printf("[%20.19i]", 8000);
-
-	return_values(v_printf, v_ftprintf);
-
-	
 
 	
 
@@ -1015,10 +475,10 @@ int	main(void)
 	displayTestSeparator("Test %x int_max hexa number", 96);
 
 	headings(1);
-	v_printf = printf("%x", FT_INT_MAX);
+	v_printf = printf("%x", INT_MAX);
 	bn();
 	headings(2);
-	v_ftprintf = ft_printf("%x", FT_INT_MAX);
+	v_ftprintf = ft_printf("%x", INT_MAX);
 	
 	return_values(v_printf, v_ftprintf);
 
@@ -1090,10 +550,10 @@ int	main(void)
 	displayTestSeparator("Test %X int_max hexa number", 93);
 
 	headings(1);
-	v_printf = printf("%X", FT_INT_MAX);
+	v_printf = printf("%X", INT_MAX);
 	bn();
 	headings(2);
-	v_ftprintf = ft_printf("%X", FT_INT_MAX);
+	v_ftprintf = ft_printf("%X", INT_MAX);
 	
 	return_values(v_printf, v_ftprintf);
 

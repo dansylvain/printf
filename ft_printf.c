@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dan <dan@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 06:43:39 by dsylvain          #+#    #+#             */
-/*   Updated: 2023/11/01 16:33:21 by dan              ###   ########.fr       */
+/*   Updated: 2023/11/02 08:25:30 by dsylvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_printf(const char *str, ...)
 		str++;
 	}
 	va_end(args);
-	return (0);
+	return (char_printed);
 }
 
 void	declare_func_ptr(t_func_ptr *func_ptr)
@@ -46,6 +46,8 @@ void	declare_func_ptr(t_func_ptr *func_ptr)
 	func_ptr[5] = print_p;
 	func_ptr[6] = print_x_lowercase;
 	func_ptr[7] = print_x_uppercase;
+	func_ptr[8] = print_percent;
+	// func_ptr[9] = print_null;
 }
 
 int	get_index(char c)
@@ -61,5 +63,5 @@ int	get_index(char c)
 			return (i);
 		i++;
 	}
-	return (-1);
+	return (i);
 }
