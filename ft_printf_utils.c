@@ -6,7 +6,7 @@
 /*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:46:31 by dsylvain          #+#    #+#             */
-/*   Updated: 2023/11/02 09:18:54 by dsylvain         ###   ########.fr       */
+/*   Updated: 2023/11/02 10:25:43 by dsylvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,11 @@ int	ft_putnbr_fd(int n, int fd)
 	long int	num;
 	int			i;
 
-	i = 0;
+	i = get_nbr_str_len(n);
 	num = n;
 	if (num < 0)
 	{
 		ft_putchar_fd('-', fd);
-		i++;
 		num = -num;
 	}
 	if (num >= 10)
@@ -49,7 +48,6 @@ int	ft_putnbr_fd(int n, int fd)
 		ft_putnbr_fd(num / 10, fd);
 	}
 	ft_putchar_fd((num % 10) + '0', fd);
-	i++;
 	return (i);
 }
 
@@ -58,14 +56,13 @@ int	ft_putunbr_fd(unsigned int n, int fd)
 	long unsigned int	num;
 	int					i;
 
-	i = 0;
+	i = get_nbr_str_len(n);
 	num = n;
 	if (num >= 10)
 	{
 		ft_putnbr_fd(num / 10, fd);
 	}
 	ft_putchar_fd((num % 10) + '0', fd);
-	i++;
 	return (i);
 }
 

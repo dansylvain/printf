@@ -6,7 +6,7 @@
 /*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:51:10 by dsylvain          #+#    #+#             */
-/*   Updated: 2023/11/02 09:15:15 by dsylvain         ###   ########.fr       */
+/*   Updated: 2023/11/02 10:53:52 by dsylvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 
 typedef int	(*t_func_ptr)(va_list);
 
+int		get_nbr_str_len(long int n);
 void	declare_func_ptr(t_func_ptr *func_ptr);
 int		ft_printf(const char *str, ...);
 int		get_index(char c);

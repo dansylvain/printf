@@ -5,65 +5,36 @@
 #                                                     +:+ +:+         +:+      #
 #    By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/19 07:30:24 by dsylvain          #+#    #+#              #
-#    Updated: 2023/11/02 08:54:11 by dsylvain         ###   ########.fr        #
+#    Created: 2023/11/02 10:40:29 by dsylvain          #+#    #+#              #
+#    Updated: 2023/11/02 11:13:10 by dsylvain         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# version to create executable
-
-NAME = ft_printf
+NAME = libftprintf.a
 
 CC = gcc
 
-CFLAGS = -Ilibft
+CFLAGS = -Wall -Wextra -Werror
 
-SRC = ft_printf.c ft_printf_utils.c print_funcs.c print_funcs_2.c .testermain.c
+SRC = ft_printf.c ft_printf_utils.c ft_print_funcs.c ft_print_funcs_2.c
 
 OBJ = $(SRC:.c=.o)
+
+OBJ_BONUS = $(SRC_BONUS:_bonus.c=_bonus.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+	ar rcs	$(NAME)	$(OBJ)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	gcc $(CFLAGS) -c $< -o $@
 
 clean:
-	rm	-f	$(OBJ)
+	rm	-f	$(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	rm	-f	$(NAME) 
 
 re:	fclean	all
 
-# version to create .a file
-
-# NAME = ft_printf.a
-
-# CC = gcc
-
-# CFLAGS = -Wall -Wextra -Werror -Ilibft
-
-# LDFLAGS = -Llibft -lft
-
-# SRC = ft_printf.c ft_printf_utils.c print_funcs.c print_funcs_2.c
-
-# OBJ = $(SRC:.c=.o)
-
-# all: $(NAME)
-
-# $(NAME): $(OBJ)
-# 	ar rcs $(NAME) $(OBJ)
-
-# %.o: %.c
-# 	$(CC) $(CFLAGS) -c $< -o $@
-
-# clean:
-# 	rm	-f	$(OBJ)
-
-# fclean: clean
-# 	rm	-f	$(NAME) 
-
-# re:	fclean	all

@@ -6,11 +6,30 @@
 /*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 16:15:25 by dan               #+#    #+#             */
-/*   Updated: 2023/11/02 09:17:45 by dsylvain         ###   ########.fr       */
+/*   Updated: 2023/11/02 10:38:02 by dsylvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	get_nbr_str_len(long int n)
+{
+	int	nbr_str_len;
+
+	nbr_str_len = 0;
+	if (n < 0)
+	{
+		nbr_str_len++;
+		n = -n;
+	}
+	while (n >= 10)
+	{
+		n /= 10;
+		nbr_str_len++;
+	}
+	nbr_str_len++;
+	return (nbr_str_len);
+}
 
 int	print_x_lowercase(va_list args)
 {
