@@ -6,7 +6,7 @@
 /*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:56:14 by dan               #+#    #+#             */
-/*   Updated: 2023/11/02 09:16:31 by dsylvain         ###   ########.fr       */
+/*   Updated: 2023/11/02 09:54:00 by dsylvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	print_d_or_i(va_list args)
 
 	num = va_arg(args, int);
 	if (!num)
-		return (print_null(2));
+		return (print_null(0));
 	return (ft_putnbr_fd(num, 1));
 }
 
