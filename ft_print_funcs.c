@@ -6,7 +6,7 @@
 /*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 14:56:14 by dan               #+#    #+#             */
-/*   Updated: 2023/11/02 12:14:53 by dsylvain         ###   ########.fr       */
+/*   Updated: 2023/11/02 12:19:28 by dsylvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@ int	print_c(va_list args)
 	char	c;
 
 	c = va_arg(args, int);
-	write(1, &c, 1);
-		return (1);
-	// return (ft_putchar_fd(c, 1));
+	return (ft_putchar_fd(c, 1));
 }
 
 int	print_s(va_list args)
