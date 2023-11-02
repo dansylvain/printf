@@ -6,7 +6,7 @@
 /*   By: dsylvain <dsylvain@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:51:10 by dsylvain          #+#    #+#             */
-/*   Updated: 2023/11/02 09:09:19 by dsylvain         ###   ########.fr       */
+/*   Updated: 2023/11/02 09:15:15 by dsylvain         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ int		print_p(va_list args);
 int		print_x_lowercase(va_list args);
 int		print_x_uppercase(va_list args);
 int		print_percent(va_list args);
-int		print_null(int	zero_null_or_nil);
+int		print_null(int zero_null_or_nil);
 
 #endif
